@@ -1,0 +1,19 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+
+<h3>{{articulo.titulo}}</h3>
+<h5>{{articulo.subtitulo}}</h5>
+<h5>{{articulo.cuerpo}}</h5>
+<h5>{{articulo.autor}}</h5>
+
+<a href="{% url 'articulos' %}">Volver</a>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}

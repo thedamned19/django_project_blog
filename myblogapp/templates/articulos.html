@@ -1,0 +1,70 @@
+{% extends "layouts/base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articulos</title>
+</head>
+<body>
+    {% block content %}
+
+    <h2>Cantidad de articulos: {{cant_articulos}}</h2>
+    
+    {% if cant_articulos == 0 %}
+        <h2>No hay entradas aún</h2>
+    
+    {% else %}
+
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Subtitulo</th>
+                    <th></th>
+                    <th>Acciones</th>
+                    <th></th>
+                </tr>
+                {% for articulo in articulos %}
+                <tr>
+                    <td>{{articulo.titulo}}</td>
+                    <td>{{articulo.subtitulo}}</td>
+                    <td>
+                        <a href="{% url 'ver_articulo' articulo.id %}">Leer más</a>
+                    </td>
+                    {% if user.id == articulo.autor_id %}
+                    <td>
+                        <a href="{% url 'editar_articulo' articulo.id %}">Editar</a>
+                    </td>
+                    {% endif %}
+                    {% if user.id == articulo.autor_id %}
+                    <td>
+                        <a href="{% url 'eliminar_articulo' articulo.id %}">Eliminar</a>
+                    </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+    
+    {% endif %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+    
+    {% endblock %}
+
+        
+</body>
+</html>
+
+
+
+

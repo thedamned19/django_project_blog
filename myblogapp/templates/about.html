@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="container">
+    <h2 class="text-center text-dark">
+        Acerca de Mi
+    </h2>
+    <br>
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+            <div class="card bg-success">
+                 <div class="card-body text-center">
+                     <img src="{% static 'ErnestoLeimsieder.jpg' %}" class="rounded-circle mb-2" width="150px">
+                 <h3 class="card-title mb-3">{{creador}}</h3>
+                 <p class="card-text">Python Developer Jr.</p>
+                 <p class="card-text">Sigueme en:</p>
+                 <a href="https://https://github.com/thedamned19"><i class="bi bi-github text-dark mx-1"></i></a>
+                 </div>
+            </div>
+        </div>
+        <div class="col">
+         <div class="">
+              <div class="text-center">
+                <p>{{texto_uno}}</p>
+                 <p>{{texto_dos}}</p>
+              </div>
+         </div>
+     </div>
+    </div>
+ </div>
+
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+{% endblock %}

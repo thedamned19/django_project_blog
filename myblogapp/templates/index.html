@@ -1,0 +1,23 @@
+{% extends "layouts/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<main class="container py-5">
+    <section class="card card-body">
+        <h1 class="display-1 text-center">Bienvenido al blog.</h1>
+        {% if user.is_authenticated %}
+        <p class="text-center">Hola que tal {{ request.user.first_name }} {{ request.user.last_name }}</p>
+    {% endif %}
+    
+    </section>
+</main>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}
