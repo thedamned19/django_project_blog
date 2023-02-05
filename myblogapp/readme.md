@@ -7,4 +7,4 @@ y agregar un avatar como un dato mas.
 El listado de datos le permitirá al usuario
 modificar o eliminar un artículo creado por él.
 
-https://www.loom.com/share/fc7c036bdde848e89d576c4ea23d8f35
+
