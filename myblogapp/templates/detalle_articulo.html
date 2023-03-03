@@ -1,0 +1,34 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="card mb-3" >
+            <div class="row no-gutters">
+                <div class="col-md-6">                    
+                    <div class="articulo-img">
+                        <img src="{{articulo.imagen.url}}" class="img-fluid rounded-start" alt="{{articulo.titulo}}">
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex flex-column">
+                    <div class="card-body">
+                        <h3 class="card-title">{{articulo.titulo}}</h3>
+                        <h5 class="card-title">{{articulo.subtitulo}}</h5>
+                        <p class="card-text">{{articulo.cuerpo}}</p>
+                        <p class="card-text"><small class="text-muted">{{articulo.autor}}</small></p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex bd-highlight">
+                            <a href="{% url 'articulos' %}" class="btn btn-outline-primary p-2 flex-grow-1 bd-highlight border text-center">Volver</a>
+                        </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+    </div>        
+</div>
+
+
+{% endblock %}

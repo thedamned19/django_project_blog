@@ -1,0 +1,13 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<span>Vas a eliminar a {{ object }}</span>
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Confirmar" />
+<a href="{% url 'articulos' %}">Volver</a>
+</form>
+
+{% endblock %}

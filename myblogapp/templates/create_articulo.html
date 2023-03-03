@@ -1,0 +1,29 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form method="POST" class="card card-body text-center" enctype="multipart/form-data">
+                <h1>Crear artículo</h1>
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{ form.as_p }}  
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>   
+        </div>
+    </div>
+</main>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <form method="post" class="card card-body text-center">
+                <h1>Editar datos</h1>
+                {{form}}
+                {% csrf_token %}
+                <p>Tu username es <b>{{ object.username }}</b></p>
+                <div class="mb-3">
+                    <label for="first_name">First name</label>
+                    <input type="first_name" name="first_name" id="first_name" class="form-control" 
+                    placeholder={{ object.first_name }}>
+                </div>
+                <div class="mb-3">
+                    <label for="last_name">Last name</label>
+                    <input type="last_name" name="last_name" id="last_name" class="form-control" 
+                    placeholder={{ object.last_name }}>
+                </div>
+                <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" 
+                    placeholder={{ object.email }}>
+                </div>
+                <input type="submit" class="btn btn-primary" value= "Modificar" />
+            </form>
+        </div>
+    </div>
+</main>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}

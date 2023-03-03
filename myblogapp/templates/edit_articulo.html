@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+        <button>Editar</button>
+    <a href="{% url 'articulos' %}">Volver</a>
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}

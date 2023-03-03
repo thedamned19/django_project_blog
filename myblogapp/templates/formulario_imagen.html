@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<h3>Cargar imagen</h3>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value= "Cargar imagen" />
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}
